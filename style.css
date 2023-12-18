@@ -1,0 +1,1998 @@
+:root {
+    /* COLOR */
+        --clr-Coconut: hsl(43, 28%, 92%);
+        --clr-White: hsl(0, 0%, 100%);
+        --clr-Blue: hsl(205, 98%, 35%);
+        --clr-Lightblue: hsl(200, 100%, 40%);
+        --clr-Red: hsl(354, 71%, 38%);
+        --clr-Dark-Red: hsl(0, 50%, 30%);;
+        --clr-Grey: hsl(0, 8%, 51%);
+        --clr-Black: hsl(0, 0%, 0%);
+        /* NEU */
+        --clr-header-button-hover-mobile: rgba(61, 106, 138, 0.85);
+        /* NEU */
+        --clr-nav-menu: rgba(40, 116, 170, 0.85);
+  
+    /* FONT */
+        --ff-primary: 'Source Sans 3', sans-serif;;
+        --ff-Logo: 'Roboto', sans-serif;
+        --ff-body: var(--ff-primary);
+        --ff-heading: var(--ff-primary);
+      
+        --fw-regular: 400;
+        --fw-semi-bold: 500;
+        --fw-bold: 700;
+
+    
+    /* BORDER */
+     --nav-menu-border-bottom-radius: 15px;
+
+    /* header-height */
+        /* "blue header" */
+        --blue-header-height-big-screen: 67px;
+        /* header-clr-maroon */
+        --header-clr-maroon: hsl(0, 51%, 30%);
+        --header-clr-dark-maroon: hsl(354, 85%, 18%);
+        --header-clr-dark-blue: hsl(227, 41%, 33%);
+        --header-clr-obsidian-blue: hsl(227, 55%, 21%);
+
+    /* Sizes */
+        /* BIG SCREEN */
+            --big-screen-headline-two-three: 35px;
+            --big-screen-main-width: 1600px;
+            --big-screen-logo-font-size: 25px;
+
+        /* MIDDLE SCREEN */
+            /* general styling */
+            --middle-screen-hl-two-three: 30px;
+            --middle-screen-main-width: 1200px;
+            --middle-screen-logo-font-size: 22px;
+            /* header */
+            --middle-screen-nav-box-height: 57px;
+            --middle-screen-header-button-font-size: 22px;
+            --middle-screen-header-button-height: 37px;
+
+
+        /* TABLET */
+            /* general styling */
+            --tablet-main-width: 600px;
+            --tablet-hl-font-size-one: 43.5px;
+            --tablet-hl-font-size-two-three: 25px;
+            --tablet-hl-line-height-two-three: 38px;
+            --tablet-logo-font-size: 22px;
+            /* header */
+            --tablet-logo-nav-box-height: 65px;
+            --tablet-header-button-font-size: 23px;
+            --tablet-header-button-height: 55px;
+            --tablet-menu-icon-wrapper-font-size: 30px;
+            --tablet-arrow-button-height: 35px;
+
+        /* MOBILE*/
+            /* general styling */
+            --mobile-main-width: 320px;
+            --mobile-p-font-size: 18px;
+            --mobile-hl-font-size-one: 30px;
+            --mobile-hl-font-size-two-three: 22px;
+            /* header */
+            --mobile-menu-icon-wrapper-font-size: 30px;
+  }
+
+/* CSS CLEAN */
+   /* https://piccalil.li/blog/a-modern-css-reset */
+
+    /* Box sizing rules */
+    *,
+    *::before,
+    *::after {
+    box-sizing: border-box;
+    }
+
+    /* Remove default margin */
+    * {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    }
+
+    /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+    ul[role="list"],
+    ol[role="list"] {
+    list-style: none;
+    }
+
+    /* Set core root defaults */
+    html:focus-within {
+    scroll-behavior: smooth;
+    }
+
+    html,
+    body {
+    height: 100%;
+    }
+
+    /* Set core body defaults */
+    body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    }
+
+    /* A elements that don't have a class get default styles */
+    a:not([class]) {
+    text-decoration-skip-ink: auto;
+    }
+
+    /* Make images easier to work with */
+    img,
+    picture,
+    svg {
+    max-width: 100%;
+    display: block;
+    }
+
+    /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+    @media (prefers-reduced-motion: reduce) {
+        html:focus-within {
+            scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+
+
+/* Utility classes */
+
+/* GENERAL STYLING */
+
+    body{
+        background-color: var(--clr-Coconut) ;
+        font-family: var(--ff-primary);
+    }
+
+
+    ul{
+        list-style: none;
+    }
+
+    p{
+        line-height: 40px;
+    }
+    
+    b{
+        font-weight: bold;
+    }
+
+    .br-tag-desktop{
+        display: none;
+    }
+
+    .br-tag-tablet{
+        display: none;
+    }
+
+    .br-tag-mobile{
+        display: none;
+    }
+
+    .hr-tag-MOBILE{
+        display: none;
+    }
+
+    .uppercase{
+        text-transform: uppercase;
+    }
+
+    /* headlines */
+        .headline-one{
+            text-align: center;
+            font-weight: bold;
+            color: var(--clr-Blue);
+            text-transform: uppercase; 
+            letter-spacing: 5px; 
+        }
+        
+        .headline-two{
+            font-weight: bold;
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            line-height: 45px;
+        }
+        
+        .headline-three{
+            font-size: 35px;
+            font-weight: bold;
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            line-height: 45px;
+            margin-bottom: 40px; 
+        }
+
+
+    /* table */
+        .table-box{
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            /* background-color: aqua; */
+        }
+
+        .info-table{
+            text-align: left;
+            font-family: "Source Sans Pro", sans-serif;
+            border-spacing: 0; 
+            line-height: 30px;
+            margin-bottom: 50px;
+            
+        }
+
+        .platzbelegungszeiten colgroup col{
+            width: 25%;
+        }
+
+        .oeffnungszeiten colgroup col{
+            width: 33%;
+        }
+
+        .info-table tr{
+            height: 35px;
+            letter-spacing: 2px;
+            
+        }
+
+        .info-table td{
+            border: 1px solid var(--clr-Red);
+            color: var(--clr-Red);
+            vertical-align: top;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 15px;
+            border-collapse: collapse;
+        }
+
+        .info-table th{
+            background-color: var(--clr-Red);
+            padding-bottom: 15px;
+            color: #F1EEE6;
+            vertical-align: top;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 15px;
+            
+        }
+
+            /* Damit sich die Borders der TDs nicht überlappen. */
+            .info-table td{
+                border-top: none;
+                border-right: none;
+            }
+
+            .info-table td:last-child{
+                border-right: 1px solid var(--clr-Red);
+            }
+
+        .info-table tr:first-child th:first-child{
+            border-top-left-radius: 10px;
+        }
+
+        .info-table tr:first-child th:last-child{
+            border-top-right-radius: 10px;
+        }
+
+        .info-table tr:last-child td:first-child{
+            border-bottom-left-radius: 10px;
+        }
+
+        .info-table tr:last-child td:last-child{
+            border-bottom-right-radius: 10px;
+        }
+
+
+/* header */
+
+    header{
+    position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--clr-Blue);
+        z-index: var(--z-fixed);
+    }
+
+        #header-DESKTOP{
+            display: none;
+        }
+
+        #header-MOBILE{
+            display: none;
+        }
+
+        header button{
+            color: var(--clr-Coconut);
+            font-family: var(--ff-primary);
+            background-color: transparent;
+        }
+
+    /* .nav-wrapper */
+        .nav-wrapper{
+            position: relative;
+            margin: 0 auto 0 auto;
+        }
+
+    /* logo-nav-box*/
+        #logo{
+          line-height: 34px;
+          font-weight: bold;
+          letter-spacing: 2px;
+          border: none;
+          padding-top: 0px;
+        }
+
+    /* .nav-menu  */
+    .nav-menu, .nav-menu-MOBILE{
+        position: absolute;
+        width: 100%;
+        display: none;
+        background-color: rgba(40, 116, 170, 0.85);
+        
+        border-bottom-left-radius: var(--nav-menu-border-bottom-radius);
+        border-bottom-right-radius: var(--nav-menu-border-bottom-radius);
+    }
+
+        .nav-button-wrapper{
+            background-color: transparent;
+        }  
+
+        .nav-link{
+        cursor: pointer;
+        }
+
+        .cursor-default{
+        cursor: default;
+        }
+
+    
+    /* banner */
+    #banner{
+        position: absolute;
+        display: none;
+        background-color: rgba(167, 28, 41, 0.55);
+        /* font */
+            font-family: var(--ff-primary);
+            color: var(--clr-Coconut);
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-align: center;
+            line-height: 34px;
+        /* padding */
+            padding-top: 15px;
+            padding-bottom: 15px;
+        /* border */
+            border-bottom-left-radius: var(--nav-menu-border-bottom-radius);
+            border-bottom-right-radius: var(--nav-menu-border-bottom-radius);
+    }
+
+/* section */
+    section{
+        /* Jede Section hat 100% im Browser */
+        min-height: 100%; 
+        margin: 0 auto 0 auto; 
+    }
+
+    /* .content */
+        .oneColumn-Box{
+            font-family: var(--ff-primary);
+            text-align: center;
+            color: var(--clr-Blue);
+        }
+
+        .twoColumns-Box{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "leftColumn rightColumn"; 
+        }
+
+            .leftColumn{
+                grid-area: leftColumn;
+                text-align: left;
+                color: var(--clr-Blue);
+            }
+
+            .rightColumn{
+                grid-area: rightColumn;
+                text-align: right;
+                color: var(--clr-Red);
+            }
+
+            .contentBox{
+                margin-top: 34px;
+                font-family: var(--ff-primary);
+                line-height: 40px;
+            }
+        
+        
+
+/* Sections */
+    /* Section: Landingpage */
+        #wrapper-landingpage{
+            font-family: var(--ff-primary);
+            font-weight: bold;
+            letter-spacing: 5px; 
+            text-transform: uppercase;
+            display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+        }
+
+        #wrapper-landingpage div{
+            width: auto;
+        }
+
+        .wrapper-logo{
+            color: var(--clr-Red);
+        }
+
+            #tennis-club{
+                animation-name: animation-font-wrapper-logo;
+                animation-duration: 4s;
+            }
+
+            #staudinger{
+                animation-name: animation-font-wrapper-logo;
+                animation-duration: 1s;
+            }
+
+            #gesamtschule{
+                animation-name: animation-font-wrapper-logo;
+                animation-duration: 5s; 
+            }
+
+            #ev{
+                animation-name: animation-font-wrapper-logo;
+                animation-duration: 5s; 
+            }
+
+        #willkommen{
+            color: var(--clr-Blue);
+            animation-name: animation-willkommen;
+                animation-duration: 4s; 
+        }
+
+            @keyframes animation-font-wrapper-logo{
+                from {color: rgba(166, 28, 42, 0.1);}
+                to {color: var(--clr-Red);}
+            }
+
+            @keyframes animation-willkommen{
+                from {color: rgb(2, 104, 177, 0.1)}
+                to {color: var(--clr-Blue);}
+            }
+
+        
+    /* Section: News */
+
+        /* .newsletter */
+        .newsletter{
+            color: var(--clr-Red);
+            }
+
+            /* newsletter-headline */
+
+            .newsletter-headline{
+                text-transform: uppercase;
+                text-align: center;
+                letter-spacing: 2px;
+                font-weight: bold; 
+                /* background-color: aqua; */
+            }
+
+                .newsletter-headline-date{
+                    display: flex;
+                    justify-content: center;
+                }
+            
+            /* .newsletter-item */
+
+                .newsletter-item-headline{
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                }
+
+                    .newsletter-item-headline-info{
+                        text-align: right;
+                    }
+                
+                .newsletter-item-textbox{
+                    margin: 0 auto 0 auto;
+                    /* column */
+                        column-rule: 2px dashed var(--clr-Red);
+                    /* padding */
+                        padding-left: 15px;
+                        padding-right: 15px; 
+                }
+
+                .oneColumn{
+                    text-align: center;
+                    border-top: 2px dashed var(--clr-Red);
+                }
+
+
+    /* Section: Mitgliederneuafnahme */
+
+        #mitgliederneuafnahme a{
+        text-decoration: none;
+        font-size: 32px;
+        color: var(--clr-Red);
+        font-weight: bold;
+        text-transform: uppercase; 
+        /* Damit sich a-Tag wie ein Block-Element verhält. */
+            display: block;
+            padding-bottom: 25px;   
+        }   
+
+    /* Section: öffnungszeiten */
+    
+        .wrapper-oeffnungszeiten{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+    /* Section: vorstand */
+        
+        .vorstand-image-box{
+            display: grid;
+            align-items: start
+        }
+
+        .vorstand-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .vorstand-foto{
+            border-radius: 50%;
+        }
+
+        .vorstand-foto:hover{
+            outline: 8px solid var(--clr-Red);
+        }
+        .vorstand-image-title{
+            margin-top: 15px;
+            text-transform: uppercase;
+            font-family: var(--ff-primary);
+            letter-spacing: 2px;
+            color: var(--clr-Red);
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .vorstand-image-subtitle{
+            margin-top: 8px;
+            font-family: var(--ff-primary);
+            letter-spacing: 2px;
+            color: var(--clr-Red);
+            line-height: 32px; 
+            text-align: center;
+        }
+
+    /* Section: wettkampfmannschaft */
+        .wettkampfmannschaft-image-box{
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        #wettkampfmannschaft .headline-three{
+            color: var(--clr-Red);
+        }
+
+        .spielgemeinschaft-foto{
+            border: 4px solid var(--clr-Red);
+            border-radius: 5px;
+        }
+
+    /* Section: Anfahrt Tennisanlage */
+        .iframe-box-wrapper{
+            display: none;
+        }
+        
+        .iframe-box{
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        iframe{
+            border:4px solid var(--clr-Red);
+            border-radius: 5px;
+        }
+
+     /* Section: Impressum */
+        #haftungsausschluss{
+            margin-top: 104px;
+        }
+        
+
+    /* footer */
+        footer{
+            width: 100%;
+            height: 57px;
+            background-color: var(--clr-Red);
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+            justify-content: space-between;
+            font-family: var(--ff-primary);
+            color: var(--clr-Coconut);  
+        }
+
+        .footer-wrapper{
+            margin: 0 auto 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .copyright{
+            font-weight: bold;
+        }
+
+        footer a{
+            text-decoration: none;
+            color: var(--clr-Coconut);
+            letter-spacing: 2px;
+        }
+
+        #footer-logo{
+            line-height: 16px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            border: none;
+            padding-top: 0px;
+            text-transform: uppercase; 
+            text-align: center;
+            color: var(--clr-Coconut);
+        }
+
+/* media queries */
+    
+    /* BIG SCREEN */
+    @media only screen and (min-width: 2000px){
+        /* GENERAL STYLING */
+            p{
+                margin-bottom: 38px;
+                font-size: 22px;
+            }
+
+            .br-tag-desktop{
+                display: block;
+            }
+
+            .headline-one{
+                font-size: 68px;
+            }
+
+            .headline-two{
+                font-size: var(--big-screen-headline-two-three);
+            }
+
+            .headline-three{
+                font-size: var(--big-screen-headline-two-three);
+            }
+
+            /* table */
+            .info-table{
+                font-size: 20px;
+                width: 70%;
+            }
+        
+        /* header */
+            #header-DESKTOP{
+                display: block;
+            }
+
+                header button{
+                    border: none;
+                    font-size: var(--middle-screen-header-button-font-size);
+                    height: var(--middle-screen-header-button-height);
+                    border-bottom: solid 3px;
+                    border-color: transparent;
+                }
+
+                    header button:hover{
+                        border-color: var(--clr-Coconut);
+                    }
+                
+            /* .nav-wrapper */
+            .nav-wrapper{
+                width: var(--big-screen-main-width);
+            }
+
+                /* logo-nav-box*/
+                .logo-nav-box{
+                    width: 100%;
+                    padding-top: 19.5px;
+                    height: var(--middle-screen-nav-box-height);
+                }
+
+                #logo{
+                    font-size: var(--big-screen-logo-font-size);
+                }
+
+                /* .nav-menu  */
+                .nav-menu{
+                    top: var(--middle-screen-nav-box-height);
+                    padding-top: 19.5px;
+                    padding-bottom: 20px;
+                }
+
+                    .nav-button-wrapper{
+                        display: flex;
+                            justify-content: center;
+                            gap: 60px;
+                    }
+
+                    .squareBorder{
+                        border-bottom-left-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                        padding-bottom: 0px;
+                    }
+
+                    .nav-menu-level-3{
+                        top: var(--middle-screen-nav-box-height);
+                        padding-top: 15px;
+                    }
+
+
+
+            /* banner */
+            #banner{
+                width: var(--big-screen-main-width);
+                font-size: var(--big-screen-logo-font-size);
+            }
+        
+        /* section */
+        section{
+            width: var(--big-screen-main-width);
+            padding-top: 120px; 
+            /* background-color: aqua; */
+        }
+
+        .content{
+            margin-top: 104px;
+        }
+            .twoColumns-Box{
+                column-gap: 400px
+            }
+                .leftColumn{
+                    width: 600px;
+                }
+
+                .rightColumn{
+                    width: 600px;
+                }
+
+        /* Sections */
+            /* Section: News */
+
+                /* .newsletter */
+
+                    /* newsletter-headline */
+                        .newsletter-headline{
+                            font-size: 45px;
+                            margin-bottom: 58px;
+                        }
+                            .newsletter-headline-title{
+                                line-height: 35px;
+                                margin-bottom: 6px;
+                            }
+
+                            /* .newsletter-headline-date */
+                            
+                                .newsletter-day{
+                                    font-size: 85px;
+                                    font-weight: bold;
+                                    line-height: 70px;
+                                    margin-left: 19px;
+                                    margin-right: 19px;
+                                }
+
+                    /* .newsletter-item */
+                        .newsletter-item{
+                            margin-bottom: 142px;
+                        }
+
+
+                        .newsletter-item-headline{
+                            font-size: var(--big-screen-headline-two-three);
+                            line-height: 43px;
+                            column-count: 2;
+                            column-rule: 4px solid var(--clr-Red);
+                            column-gap: 107px;
+                        }
+
+                            /* .newsletter-item-headline-info */
+                        
+                        .newsletter-item-textbox{
+                            width: 1200px;
+                            margin-top: 76px;
+
+                            /* column */
+                            column-gap: 70px;     
+                        }
+
+                            .oneColumn{
+                                width: 750px;
+                                margin-top: 56px;
+                                padding-top: 20px;
+                            }
+
+                            .twoColumns{
+                                /* column-Anzahl */
+                                -webkit-column-width: 515px;
+                                -moz-column-width: 515px;
+                                column-width: 515px;
+                            }
+
+                            .threeColumns{
+                                /* column-Anzahl */
+                                -webkit-column-width: 343.3px;
+                                -moz-column-width: 343.3px;
+                                column-width: 343.3px;
+                            }
+  
+            /* Section: Landingpage */
+                #wrapper-landingpage{
+                    margin-top: 120px;
+                }
+                
+                #tennis-club{
+                    font-size: 63px;
+                    line-height: 43px;
+                    padding-right: 130px;
+                    margin-bottom: 18px;
+                }
+            
+                #staudinger{
+                    font-size: 65px;
+                    line-height: 45px;
+                    padding-left: 280px;
+                    margin-bottom: 25px;
+                }
+            
+                #gesamtschule{
+                    font-size: 53px;
+                    line-height: 38px;
+                    padding-right: 160px;
+                    margin-bottom: 19px;
+                }
+            
+                #ev{
+                    font-size: 55px;
+                    line-height: 38px;
+                    padding-left: 280px;
+                    margin-bottom: 19px;
+                }
+            
+                #willkommen{
+                    font-size: 55px;
+                    line-height: 40px;
+                    padding-left: 60px;
+                }
+
+            /* Section: öffnungszeiten */
+                #oeffnungszeiten p{
+                    width: 70%;
+                }
+
+            /* Section: vorstand */
+                .vorstand-image-box{
+                    /* padding-bottom: 20px;  */
+                    grid-template-columns: 1fr 1fr 1fr;
+                 /* padding: top right/left bottom */
+                    padding: 0px 300px 40px;
+                    row-gap: 40px;
+                }
+
+                    /* vorstand-item */
+
+                        .vorstand-foto{
+                            width: 200px;
+                        }
+
+                        .vorstand-image-title{
+                            font-size: 35px;
+                            line-height: 40px; 
+                        }
+                        
+                        .vorstand-image-subtitle{
+                            font-size: 26px; 
+                        }
+            
+            /* Section: wettkampfmannschaft */
+                .spielgemeinschaft-foto{
+                    width: 615px;
+                }
+
+            /* Section: Anfahrt Tennisanlage */
+                #iframe-bigScreen{
+                    display: block;
+                }
+
+            /* footer */
+                .footer-wrapper{
+                    width: var(--big-screen-main-width);
+                }
+
+                .copyright{
+                    font-size: 20px;
+                    width: 290px;
+                }
+
+                #footer-logo{
+                    font-size: var(--big-screen-logo-font-size);
+                }
+    }
+    
+    /* MIDDLE SCREEN  */
+    @media only screen and (max-width: 1999px){
+        /* GENERAL STYLING */
+            p{
+                margin-bottom: 26px;
+                font-size: 22px;
+            }
+
+            .br-tag-desktop{
+                display: block;
+            }
+
+            /* headlines */
+            .headline-one{
+                font-size: 60px;
+            }
+
+            .headline-two{
+                font-size: var(--middle-screen-hl-two-three);
+            }
+
+            .headline-three{
+                font-size: var(--middle-screen-hl-two-three);
+            }
+
+            /* table */
+            .info-table{
+                font-size: 19px;
+                width: 85%;
+            }
+        
+        /* header */
+            #header-DESKTOP{
+                display: block;
+            }
+
+            header button{
+                border: none;
+                font-size: var(--middle-screen-header-button-font-size);
+                height: var(--middle-screen-header-button-height);
+                border-bottom: solid 3px;
+                border-color: transparent;
+            }
+
+            header button:hover{
+                border-color: var(--clr-Coconut);
+            }
+
+            /* .nav-wrapper */
+            .nav-wrapper{
+                width: var(--middle-screen-main-width);
+                /* background-color:aqua; */
+            }
+
+            /* logo-nav-box*/
+            .logo-nav-box{
+                width: 100%;
+                padding-top: 19.5px;
+                height: var(--middle-screen-nav-box-height);
+            }
+
+            #logo{
+                color:aqua;
+                font-size: var(--middle-screen-logo-font-size);
+            }
+
+            /* .nav-menu  */
+            .nav-menu{
+                top: var(--middle-screen-nav-box-height);
+                padding-top: 19.5px;
+                padding-bottom: 20px;
+            }
+
+                .nav-button-wrapper{
+                    display: flex;
+                        justify-content: center;
+                        gap: 60px;
+                }
+
+                .squareBorder{
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                    padding-bottom: 0px;
+                }
+
+                .nav-menu-level-3{
+                    top: var(--middle-screen-nav-box-height);
+                    padding-top: 15px;
+                  }
+
+            /* banner */
+            #banner{
+                width: var(--middle-screen-main-width);
+                font-size: var(--middle-screen-logo-font-size);
+            }
+        
+        /* section */
+            section{
+                width: var(--middle-screen-main-width);
+                padding-top: 140px; 
+            }
+            .content{
+                margin-top: 80px;
+            }
+
+            .twoColumns-Box{
+                column-gap: 200px
+            }
+                .leftColumn{
+                    width: 500px;
+                }
+
+                .rightColumn{
+                    width: 500px;
+                }
+
+        /* Sections */
+
+            /* .newsletter */
+
+                    /* newsletter-headline */
+                    .newsletter-headline{
+                        font-size: 40px;
+                        margin-bottom: 58px;
+                    }
+                        .newsletter-headline-title{
+                            line-height: 35px;
+                            margin-bottom: 6px;
+                        }
+
+                        /* .newsletter-headline-date */
+                        
+                            .newsletter-day{
+                                font-size: 75px;
+                                font-weight: bold;
+                                line-height: 70px;
+                                margin-left: 10px;
+                                margin-right: 10px;
+                            }
+
+                /* .newsletter-item */
+                    .newsletter-item{
+                        margin-bottom: 142px;
+                    }
+
+
+                    .newsletter-item-headline{
+                        font-size: var(--middle-screen-hl-two-three);
+                        line-height: 38px;
+                        column-count: 2;
+                        column-rule: 4px solid var(--clr-Red);
+                        column-gap: 60px;
+                    }
+
+                        /* .newsletter-item-headline-info */
+                    
+                    .newsletter-item-textbox{
+                        width: 1200px;
+                        margin-top: 56px;
+
+                        /* column */
+                        column-gap: 70px;     
+                    }
+
+                        .oneColumn{
+                            width: 750px;
+                            margin-top: 56px;
+                            padding-top: 20px;
+                        }
+
+                        .twoColumns{
+                            /* column-Anzahl */
+                            -webkit-column-width: 515px;
+                            -moz-column-width: 515px;
+                            column-width: 515px;
+                        }
+
+                        .threeColumns{
+                            /* column-Anzahl */
+                            -webkit-column-width: 343.3px;
+                            -moz-column-width: 343.3px;
+                            column-width: 343.3px;
+                        }
+
+            /* Section: Landingpage */
+            #wrapper-landingpage{
+                margin-top: 60px;
+            }
+            
+            #tennis-club{
+                font-size: 63px;
+                line-height: 43px;
+                padding-right: 130px;
+                margin-bottom: 18px;
+            }
+        
+            #staudinger{
+                font-size: 65px;
+                line-height: 45px;
+                padding-left: 280px;
+                margin-bottom: 25px;
+            }
+        
+            #gesamtschule{
+                font-size: 53px;
+                line-height: 38px;
+                padding-right: 160px;
+                margin-bottom: 19px;
+            }
+        
+            #ev{
+                font-size: 55px;
+                line-height: 38px;
+                padding-left: 280px;
+                margin-bottom: 19px;
+            }
+        
+            #willkommen{
+                font-size: 55px;
+                line-height: 40px;
+                padding-left: 60px;
+            }
+
+            /* Section: öffnungszeiten */
+                #oeffnungszeiten p{
+                    width: 90%;
+                }
+
+            /* Section: vorstand */
+                .vorstand-image-box{
+                    grid-template-columns: 1fr 1fr 1fr;
+                 /* padding: top right/left bottom */
+                    padding: 0px 200px 40px;
+                    row-gap: 40px;
+                }
+
+                /* vorstand-item */
+
+                    .vorstand-foto{
+                        width: 170px;
+                    }
+                    .vorstand-image-title{
+                        font-size: 30px;
+                        line-height: 35px; 
+                    }
+                    .vorstand-image-subtitle{
+                        font-size: 22px; 
+                    }
+
+            /* Section: wettkampfmannschaft */
+                .spielgemeinschaft-foto{
+                    width: 615px;
+                }
+            
+            /* Section: Anfahrt Tennisanlage */
+                #iframe-middleScreen{
+                    display: block;
+                }
+            
+            /* footer */
+            .footer-wrapper{
+                /* background-color: azure; */
+                width: var(--middle-screen-main-width);
+            }
+
+            .copyright{
+                font-size: 19px;
+                width: 276px;
+            }
+
+            #footer-logo{
+                font-size: var(--middle-screen-logo-font-size);
+            }
+    }
+
+    /* TABLET  */
+                           /* max-width: 768px */
+    @media only screen and (max-width: 1200px){
+        /* general styling */
+
+            p{
+                font-size: 20px;
+                margin-bottom: 26px;
+            }
+
+            .br-tag-desktop{
+                display: none;
+            }
+
+            .br-tag-tablet{
+                display: block;
+            }
+
+            /* headlines */
+                .headline-one{
+                    font-size: var(--tablet-hl-font-size-one);
+                }
+
+                .headline-two{
+                    
+                    font-size: var(--tablet-hl-font-size-two-three);
+                    line-height: var(--tablet-hl-line-height-two-three);
+                }
+
+                .headline-three{
+                    font-size: var(--tablet-hl-font-size-two-three);
+                    line-height: var(--tablet-hl-line-height-two-three);
+                }
+
+            /* table */
+            .table-box{
+                display: flex;
+                justify-content: center;
+                margin-top: 40px;
+                text-align: center;
+            }
+
+            .info-table{
+                border: 0;
+                width: 100%;
+            }
+
+                .info-table thead{
+                    position: absolute;
+                    overflow: hidden;
+                        border: none;
+                        width: 1px;
+                        height: 1px;
+                        margin: -1px;
+                        padding: 0;
+                }
+
+                .info-table tr{
+                    border: 1px solid var(--clr-Red);
+                    border-radius: 10px;
+                    height: auto;
+                    /* aus trs werden blockelemente */
+                        /* display: block; */
+                        display: flex;
+                            flex-direction: column;
+                    margin-bottom: 35px;
+                }
+
+                    .info-table tr:last-child td:first-child{
+                        border-bottom-left-radius: 0px;
+                    }
+
+                .info-table td{
+                    /* display: block; */
+                    border: none;
+                    border-bottom: 1px solid var(--clr-Red);
+                    text-align: right;
+                    padding-right: 25px;
+                }
+
+                    .info-table td:last-child{
+                        border-right: none;
+                        border-bottom: none;
+                    }
+
+                    table td::before{
+                        content: attr(data-label);
+                        float: left;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+
+        /* header */
+        #header-DESKTOP{
+            display: none;
+        }
+
+        #header-MOBILE{
+            display: block;
+        }
+
+            /* header-button */
+
+            header button{
+                font-size: var(--tablet-header-button-font-size);
+                height: var(--tablet-header-button-height);
+                border-bottom: 0.2px solid var(--clr-Coconut);
+            }
+
+                header button:first-child{
+                    border-top: 0.2px solid var(--clr-Coconut);
+                }
+
+            header button:hover{
+                color: var(--clr-Blue);
+                background-color: var(--clr-Coconut);
+                /* background-color: var(--clr-header-button-hover-mobile); */
+            }
+
+            header button:hover > .menu-arrow{
+                color: var(--clr-Blue);
+            }
+
+            /* logo-nav-box*/
+
+            .logo-nav-box{
+                display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                padding-top: 0px;
+                width: var(--tablet-main-width);
+                height: var(--tablet-logo-nav-box-height);
+                margin: 0 auto 0 auto;
+            }
+
+                #logo{
+                    color:rgb(246, 255, 0); 
+                    font-size: var(--tablet-logo-font-size); 
+                }
+                #logo:hover{
+                    background-color: transparent;
+                } 
+
+            .nav-wrapper{
+                width: 100%;
+            }
+
+            .nav-menu-MOBILE{
+                width: 100%;
+                /* min-height: 100vh; */
+                padding-top: 0px;
+                padding-bottom: 0px;
+            }
+
+            /* menu-icon-wrapper */
+            .menu-icon-wrapper{
+                color: var(--clr-Coconut);
+                font-size: var(--tablet-menu-icon-wrapper-font-size);
+                width: var(--tablet-menu-icon-wrapper-font-size);
+                position: relative;
+            }
+            
+                #hamburgerIcon, #closeIcon{
+                    position: absolute;
+                    width: max-content;
+                    height: max-content;
+                    inset: 0;
+                    margin: auto;
+                    cursor: pointer;
+                    transition: opacity 0.1s, transform 0.4s;
+                }
+    
+                #closeIcon{
+                    /* display: none; */
+                    opacity: 0;
+                }
+
+                /* .show-icon */
+                    .show-icon #hamburgerIcon {
+                        opacity: 0;
+                        transform: rotate(90deg);
+                    }
+                    
+                    .show-icon #closeIcon {
+                        opacity: 1;
+                        transform: rotate(90deg);
+                    } 
+                
+                /* .show-menu */
+                    .show-menu{
+                        display: block;
+                    }
+                
+            .menu-icon-spacer{
+                width: var(--tablet-menu-icon-wrapper-font-size);
+            } 
+
+            /* nav-menu */
+            .nav-menu-MOBILE{
+                top: var(--tablet-logo-nav-box-height);
+            }
+
+                .nav-button-wrapper{
+                    display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        gap: 0px;
+                    
+                }
+
+                .arrow-button{
+                    height: var(--tablet-header-button-height);
+                }
+        
+                .nav-menu-spacer{
+                    height: var(--tablet-arrow-button-height);
+                }
+
+                .menu-arrow{
+                    font-size: 16px;
+                    line-height: 10px;
+                    color: var(--clr-Coconut);
+                }
+
+        /* section */
+        section{
+            width: var(--tablet-main-width);
+            padding-top: 140px; 
+            /* background-color: darkseagreen; */
+        }
+        
+            /* .content */
+            .content{
+                margin-top: 50px;
+            }
+
+                .twoColumns-Box{
+                    display: flex;
+                        flex-direction: column;
+                }
+
+                .rightColumn{
+                    
+                    width: 100%;
+                }
+
+                .leftColumn{
+                    
+                    width: 100%;
+                }
+
+                .twoColumns-Box-item:nth-child(odd){
+                    color: var(--clr-Blue);
+                    text-align: left;
+                    padding-right: 100px;
+                }
+
+                .twoColumns-Box-item:nth-child(even){
+                    text-align: right;
+                    color: var(--clr-Red);
+                    padding-left: 100px;
+                }
+
+        /* Sections */
+            
+            /* .newsletter */
+
+                /* newsletter-headline */
+                .newsletter-headline{
+                    font-size: 35px;
+                    margin-bottom: 58px;
+                }
+                    .newsletter-headline-title{
+                        /* line-height: 30px; */
+                        margin-bottom: 0px;
+                        line-height: 30px;
+                    }
+
+                /* .newsletter-headline-date */
+                
+                    .newsletter-day{
+                        font-size: 65px;
+                        font-weight: bold;
+                        line-height: 70px;
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    }
+
+                    .newsletter-month-year{
+                        padding-top: 8px;
+                    }
+
+                /* .newsletter-item */
+                    .newsletter-item{
+                        margin-bottom: 80px;
+                    }
+
+
+                    .newsletter-item-headline{
+                        font-size: var(--tablet-hl-font-size-two-three);
+                        line-height: 30px;
+                        column-count: 2;
+                        column-rule: 4px solid var(--clr-Red);
+                        column-gap: 40px;
+                    }
+
+                        /* .newsletter-item-headline-info */
+                    
+                    .newsletter-item-textbox{
+                        width: 600px;
+                        margin-top: 36px;
+
+                        /* column */
+                        column-gap: 40px;     
+                    }
+
+                        .oneColumn{
+                            width: 490px;
+                            margin-top: 26px;
+                            padding-top: 20px;
+                        }
+
+                        .twoColumns{
+                            /* column-Anzahl */
+                            -webkit-column-width: 245px;
+                            -moz-column-width: 245px;
+                            column-width: 245px;
+                        }
+
+                        .threeColumns{
+                            /* column-Anzahl */
+                            -webkit-column-width: 490px;
+                            -moz-column-width: 490px;
+                            column-width: 490px;
+                            /* background-color: bisque; */
+                        }
+
+                            .threeColumns p:nth-child(odd){
+                                text-align: left;
+                            }
+
+                            .threeColumns p:nth-child(even){
+                                text-align: right;
+                            }
+
+            /* Section: Landingpage */
+                #wrapper-landingpage{
+                    margin-top: 10px;
+                }
+                
+                #tennis-club{
+                    font-size: 53px;
+                    line-height: 37px;
+                    padding-right: 130px;
+                    margin-bottom: 13px;
+                }
+            
+                #staudinger{
+                    font-size: 55px;
+                    line-height: 38px;
+                    padding-left: 120px;
+                    margin-bottom: 20px;
+                }
+            
+                #gesamtschule{
+                    font-size: 43px;
+                    line-height: 31px;
+                    padding-right: 80px;
+                    margin-bottom: 15px;
+                }
+            
+                #ev{
+                    font-size: 45px;
+                    line-height: 33px;
+                    padding-left: 280px;
+                    margin-bottom: 13px;
+                    
+                }
+            
+                #willkommen{
+                    font-size: 45px;
+                    line-height: 33px;
+                    padding-left: 60px;
+                }
+
+            /* Section: vorstand */
+                .vorstand-image-box{
+                    grid-template-columns: 1fr 1fr;
+                /* padding: top right/left bottom */
+                    padding: 0px 60px 20px;
+                    row-gap: 30px;
+                }
+
+                .vorstand-foto{
+                    width: 160px;
+                }
+
+                .vorstand-image-title{
+                    font-size: var(--tablet-hl-font-size-two-three);
+                    line-height: 30px; 
+                }
+                .vorstand-image-subtitle{
+                    font-size: 22px; 
+                }
+
+            /* Section: Mitgliederneuafnahme */
+                #mitgliederneuafnahme a{
+                    font-size: var(--tablet-hl-font-size-two-three);
+                }
+            
+            /* Section: Anfahrt Tennisanlage */
+                #iframe-middleScreen{
+                    display: none;
+                }
+                
+                #iframe-tablet{
+                    display: block;
+                    
+                }
+
+                #iframe-tablet iframe{
+                    width: 500px;
+                    height: 450px;
+                }
+
+            /* Section: impressum*/
+                #impressum{
+                    padding-bottom: 40px;
+                }
+                
+                
+            /* footer */
+            footer{
+                height: auto;
+            }
+
+            .footer-wrapper{
+                width: var(--tablet-main-width);
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-areas: "footer-logo" 
+                                     "copyright"; 
+            }
+
+            #footer-logo{
+                font-size: var(--tablet-logo-font-size);
+                width: 100%;
+                grid-area: footer-logo;
+                /* background-color: blueviolet; */
+                padding: 15px 0px; 
+            }
+
+            .copyright{
+                /* font-size: 19px; */
+                text-align: center;
+                width: 100%;
+                grid-area: copyright;
+                /* background-color: blue; */
+                padding-bottom: 10px;
+
+            }    
+    }
+
+/* MOBILE */
+    /* --> nachher bei 600px umschalten */
+    /* Bauen auf 320px */
+    @media only screen and (max-width: 600px){
+        /* general styling */
+            p{
+                font-size: var(--mobile-p-font-size);
+                line-height: 33px;
+                margin-bottom: 26px;
+            }
+
+
+            .br-tag-mobile{
+                display: block;
+            }
+
+            .br-tag-tablet{
+                display: none;
+            }
+
+            .hr-tag-MOBILE{
+                display: block;
+            }
+
+            /* headlines */
+                .headline-one{
+                    font-size: var(--mobile-hl-font-size-one);
+                }
+
+                    .headline-one-mobile{
+                        display: block;
+                    }
+
+                    .headline-one-desktop-tablet{
+                        display: none;
+                    }
+
+                .headline-two{
+                    font-size: var(--mobile-hl-font-size-two-three);
+                }
+
+                .headline-three{
+                    font-size: var(--mobile-hl-font-size-two-three);
+                }
+            
+            /* table */ 
+                .info-table td{
+                    text-align: center;
+                }
+                    table td::before{
+                        float: none;
+                    }
+
+        /* header */
+        #header-MOBILE{
+            display: block;
+        }
+
+            /* logo-nav-box*/
+
+            .logo-nav-box{
+                width: var(--mobile-main-width);
+                /* background-color: burlywood; */
+            }
+
+                #logo{
+                    color: var(--clr-Coconut);
+                    font-size: var(--tablet-logo-font-size); 
+                }
+
+            .nav-menu-MOBILE{
+                min-height: 100vh;
+            }
+            
+            /* menu-icon-wrapper */
+            .menu-icon-wrapper{
+                /* color: var(--clr-Coconut); */
+                font-size: var(--mobile-menu-icon-wrapper-font-size);
+                width: var(--mobile-menu-icon-wrapper-font-size);
+                
+            }
+
+                /* #closeIcon{
+                    display: none;
+                } */
+        
+                .menu-icon-spacer{
+                    width: var(--mobile-menu-icon-wrapper-font-size);
+                    background-color: blueviolet;
+                }
+        
+        /* section */
+        section{
+            width: var(--mobile-main-width);
+            padding-top: 120px; 
+            /* background-color: darkseagreen; */
+        }
+
+            /* .content */
+            .content{
+                margin-top: 30px;
+            }
+
+                .twoColumns-Box-item:nth-child(odd){
+                    color: var(--clr-Blue);
+                    text-align: left;
+                    padding-right: 50px;
+                }
+
+                .twoColumns-Box-item:nth-child(even){
+                    text-align: right;
+                    color: var(--clr-Red);
+                    padding-left: 60px;
+                }
+        
+        /* Sections */
+            /* Section: Landingpage */
+            #wrapper-landingpage{
+                margin-top: 20px;
+            }
+            
+            #tennis-club{
+                font-size: 34px;
+                line-height: 22px;
+                padding-right: 30px;
+                margin-bottom: 13px;
+            }
+        
+            #staudinger{
+                font-size: 38px;
+                line-height: 24px;
+                padding-left: 60px;
+                margin-bottom: 15px;
+            }
+        
+            #gesamtschule{
+                font-size: 32px;
+                line-height: 20px;
+                padding-right: 25px;
+                margin-bottom: 13px;
+            }
+        
+            #ev{
+                font-size: 34px;
+                line-height: 23px;
+                padding-left: 220px;
+                margin-bottom: 13px;
+            }
+        
+            #willkommen{
+                font-size: 32px;
+                line-height: 20px;
+                padding-left: 35px;
+            }
+
+            /* .newsletter */
+
+                /* newsletter-headline */
+                .newsletter-headline{
+                    font-size: 25px;
+                    margin-bottom: 58px;
+                }
+                    .newsletter-headline-title{
+                        /* line-height: 30px; */
+                        margin-bottom: 0px;
+                        line-height: 30px;
+                    }
+
+                /* .newsletter-headline-date */
+                
+                    .newsletter-day{
+                        font-size: 45px;
+                        font-weight: bold;
+                        line-height: 35px;
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    }
+
+                    .newsletter-month-year{
+                        padding-top: 8px;
+                        line-height: 18px;
+                    }
+
+                /* .newsletter-item */
+                    .newsletter-item{
+                        margin-bottom: 80px;
+                    }
+
+                        .newsletter-item-headline{
+                            font-size: var(--mobile-hl-font-size-two-three);
+                            line-height: 30px;
+                            /* 
+                                Durch column-count: 1; 
+                                entfällt column-rule und column-gap 
+                            */
+                            column-count: 1;
+                        }
+
+                            .newsletter-item-headline-info{
+                                text-align: center;
+                            }
+
+                            .hr-wrapper-MOBILE{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                /* Top & Bottom / Right & Left  */
+                                padding: 15px 0px;
+                            }
+
+                                .hr-tag-MOBILE{
+                                    text-align: center;
+                                    border-top: 4px solid var(--clr-Red);
+                                    width: 60px;
+                                    /* padding-top, padding-bottom */
+                                }
+
+                            .newsletter-item-headline-date{
+                                text-align: center;
+                            }
+
+
+                        /* .newsletter-item-headline-info */
+                    
+                    .newsletter-item-textbox{
+                        width: var(--mobile-main-width);
+                        margin-top: 36px;
+
+                        /* column */
+                        column-gap: 40px;     
+                    }
+
+                        .newsletter-item-textbox p:nth-child(odd){
+                            text-align: left;
+                        }
+
+                        .newsletter-item-textbox p:nth-child(even){
+                            text-align: right;
+                        }
+
+                        .oneColumn{
+                            width: var(--mobile-main-width);
+                            margin-top: 26px;
+                            padding-top: 20px;
+                            border: none;
+                        }
+
+                        .twoColumns{
+                            /* column-Anzahl */
+                            -webkit-column-width: var(--mobile-main-width);
+                            -moz-column-width: var(--mobile-main-width);
+                            column-width: var(--mobile-main-width);
+                            /* background-color: aqua; */
+                        }
+
+                        .threeColumns{
+                            /* column-Anzahl */
+                            -webkit-column-width: var(--mobile-main-width);
+                            -moz-column-width: var(--mobile-main-width);
+                            column-width: var(--mobile-main-width);
+                            /* background-color: bisque; */
+                        }
+            
+            /* Section: vorstand */
+            .vorstand-image-box{
+                grid-template-columns: 1fr;
+            /* padding: top right/left bottom */
+                padding: 0px 60px 20px;
+                row-gap: 30px;
+            }
+
+            /* Section: Anfahrt Tennisanlage */
+                #iframe-smallScreen{
+                    display: block;
+                }
+
+                #iframe-tablet{
+                    display: none;
+                }
+
+                #iframe-tablet iframe{
+                    width: 500px;
+                    height: 450px;
+                }
+            
+            /* footer */
+            
+            .footer-wrapper{
+                width: var(--mobile-main-width);
+            
+            }
+
+            #footer-logo{
+                font-size: var(--tablet-logo-font-size);
+                width: 100%;
+                grid-area: footer-logo;
+                /* background-color: blueviolet; */
+                padding: 15px 0px; 
+            
+                line-height: 30px;
+            }
+
+            .copyright{
+                /* font-size: 19px; */
+                text-align: center;
+                width: 100%;
+                grid-area: copyright;
+                /* background-color: blue; */
+                padding-bottom: 10px;
+            }         
+    }
+
+
+    

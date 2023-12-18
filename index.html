@@ -1,0 +1,948 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- boxicons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <header id="header-DESKTOP" onmouseleave="closeMenusDESKTOP('nav-menu')">
+    <div class="nav-wrapper">
+
+      <div class="logo-nav-box">
+        <div class="nav-button-wrapper">
+          <button class="nav-button" onmouseover="closeMenusOpenMenu('nav-menu', 'aktuelles-DESKTOP')">aktuelles</button>
+          <button class="nav-button" onmouseover="closeMenusOpenMenu('nav-menu', 'derVerein-DESKTOP')">der verein</button>
+        
+          <button id="logo" onmouseover="openCloseBanner('banner','logo')" onclick="location.href='#landingpage';">TC STAUDINGER</button>
+          <button class="nav-button" onmouseover="closeMenusOpenMenu('nav-menu', 'sportangebote-DESKTOP')">sportangebote</button>
+          <button class="nav-button" onmouseover="closeMenusOpenMenu('nav-menu', 'kontakt-DESKTOP')">kontakt</button>
+        </div> 
+      </div>
+
+      <div id="banner">
+        TENNIS-CLUB STAUDINGER GESAMTSCHULE E.V.
+      </div>
+      
+      <div id="aktuelles-DESKTOP" class="nav-menu" onmouseleave="closeMenus('nav-menu')">
+        <div class="nav-button-wrapper">
+          <button class="nav-link" onclick="location.href='#news'; closeMenusDESKTOP('nav-menu');">news</button>
+          <button class="nav-link" onclick="location.href='#platzbelegungszeiten'; closeMenusDESKTOP('nav-menu');">platzbelegungszeiten</button>
+          <button class="nav-link nav-link-pointer" onclick="location.href='#oeffnungszeiten'; closeMenusDESKTOP('nav-menu');">öffnungszeiten</button>
+        </div> 
+      </div>
+      
+      <div id="derVerein-DESKTOP" class="nav-menu" onmouseleave="closeMenusDESKTOP('nav-menu')">
+        <div class="nav-button-wrapper">
+          <button class="nav-link" onclick="location.href='#vereinsphilosophie'; closeMenusDESKTOP('nav-menu');">vereinsphilosophie</button>
+          <button class="nav-link" onclick="location.href='#derVorstand'; closeMenusDESKTOP('nav-menu');">der vorstand</button>
+          <button class="nav-link" onclick="location.href='#gastspielerregelung'; closeMenusDESKTOP('nav-menu');">gastspielerregelung</button>
+          <button class="nav-link" onclick="location.href='#mitgliederneuafnahme'; closeMenusDESKTOP('nav-menu');">mitgliederneuaufnahme</button>
+        </div>
+      </div>
+      
+      <div id="sportangebote-DESKTOP" class="nav-menu" onmouseleave="closeMenusDESKTOP('nav-menu')">
+
+        <div class="nav-button-wrapper">
+          <button class="nav-link cursor-default" id="tennistrainingButton" onmouseover="closeMenusOpenMenu('nav-menu-level-3', 'tennistraining-submenu'), squareBorder('tennistrainingButton', 'sportangebote')">tennistraining</button>
+          
+          <button class="nav-link" onmouseover="closeMenusDESKTOP('nav-menu-level-3')" onclick="location.href='#wettkampfmannschaft'; closeMenusDESKTOP('nav-menu')">wettkampfmannschaft</button>
+        </div>
+        
+          <div class="nav-menu-level-3 nav-menu" id="tennistraining-submenu" onmouseover="squareBorder('tennistraining-submenu', 'sportangebote')" onmouseleave="closeMenusDESKTOP('nav-menu-level-3')">
+            <div class="nav-button-wrapper">
+              <button class="nav-link" onclick="location.href='#bambinitraining'; closeMenusDESKTOP('nav-menu');">bambinitraining</button>
+              <button class="nav-link" onclick="location.href='#kindertraining'; closeMenusDESKTOP('nav-menu');">kindertraining</button>
+              <button class="nav-link" onclick="location.href='#jugendtraining'; closeMenusDESKTOP('nav-menu');">jugendtraining</button>
+              <button class="nav-link" onclick="location.href='#erwachsenentraining'; closeMenusDESKTOP('nav-menu');">erwachsenentraining</button>
+              <button class="nav-link" onclick="location.href='#wettkampftraining'; closeMenusDESKTOP('nav-menu');">wettkampftraining</button>
+            </div>
+          </div>
+      </div>
+
+      <div id="kontakt-DESKTOP" class="nav-menu" onmouseleave="closeMenusDESKTOP('nav-menu')">
+        <div class="nav-button-wrapper">
+          <button class="nav-link" onclick="location.href='#impressum'; closeMenusDESKTOP('nav-menu');">impressum</button>
+          <button class="nav-link" onclick="location.href='#anfahrtTennisanlage'; closeMenusDESKTOP('nav-menu');">anfahrt tennisanlage</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <header id="header-MOBILE">
+    <div class="nav-wrapper">
+
+      <div class="logo-nav-box">
+
+        <div class="menu-icon-spacer"></div>
+
+        <button id="logo" onclick="location.href='#landingpage';">TC STAUDINGER</button>
+
+        <div class="menu-icon-wrapper" id="menu-icon-wrapper" onclick="openMenuMOBILE('menu-icon-wrapper','main-menu');">
+          <i class="ri-menu-line" id="hamburgerIcon" ></i>
+          <i class="ri-close-line" id="closeIcon" ></i>
+        </div>
+
+      </div>
+      
+      <div class="nav-menu-level-1 nav-menu-MOBILE" id="main-menu">
+        <div class="nav-button-wrapper">
+          <!-- <div class="nav-menu-spacer"></div> -->
+          
+          <button class="nav-button" onclick="closeMenusOpenMenuMOBILE('nav-menu-MOBILE','aktuelles-MOBILE')">aktuelles <i class='bx bxs-right-arrow menu-arrow'></i></i>
+          </button>
+          <button class="nav-button" onclick="closeMenusOpenMenuMOBILE('nav-menu-MOBILE','derVerein-MOBILE')">der verein <i class='bx bxs-right-arrow menu-arrow'></i></i></button>
+          
+          <button class="nav-button" onclick="closeMenusOpenMenuMOBILE('nav-menu-MOBILE','sportangebote-MOBILE')">sportangebote <i class='bx bxs-right-arrow menu-arrow'></i></i></button>
+
+          <button class="nav-button" onclick="closeMenusOpenMenuMOBILE('nav-menu-MOBILE','kontakt-MOBILE')">kontakt <i class='bx bxs-right-arrow menu-arrow'></i></i></button>
+          <div class="nav-menu-spacer"></div>
+        </div> 
+      </div>
+
+      <!-- aktuelles -->
+      <div id="aktuelles-MOBILE" class="nav-menu-level-2 nav-menu-MOBILE">
+          <div class="nav-button-wrapper">
+              <button class="arrow-button" onclick="closeMenusOpenMenuMOBILE('nav-menu-MOBILE','main-menu')">
+                <i class='bx bxs-left-arrow menu-arrow'></i>
+              </button>
+              <button class="nav-link" onclick="location.href='#news'; closeMenusMOBILE('nav-menu-MOBILE');">news</button>
+              <button class="nav-link" onclick="location.href='#platzbelegungszeiten'; closeMenusMOBILE('nav-menu-MOBILE');">platzbelegungszeiten</button>
+              <button class="nav-link nav-link-pointer" onclick="location.href='#oeffnungszeiten'; closeMenusMOBILE('nav-menu-MOBILE');">öffnungszeiten</button>
+              <div class="nav-menu-spacer"></div>
+          </div>
+      </div>
+      
+      <div id="derVerein-MOBILE" class="nav-menu-level-2 nav-menu-MOBILE">
+        <div class="nav-button-wrapper">
+            <button class="arrow-button" onclick="closeMenusOpenMenuMOBILE('nav-menu-MOBILE','main-menu')">
+              <i class='bx bxs-left-arrow menu-arrow'></i>
+            </button>
+            <button class="nav-link" onclick="location.href='#vereinsphilosophie'; closeMenusMOBILE('nav-menu-MOBILE');">vereinsphilosophie</button>
+            <button class="nav-link" onclick="location.href='#derVorstand'; closeMenusMOBILE('nav-menu-MOBILE');">der vorstand</button>
+            <button class="nav-link" onclick="location.href='#gastspielerregelung'; closeMenusMOBILE('nav-menu-MOBILE');">gastspielerregelung</button>
+            <button class="nav-link" onclick="location.href='#mitgliederneuafnahme'; closeMenusMOBILE('nav-menu-MOBILE');">mitgliederneuaufnahme</button>
+            <div class="nav-menu-spacer"></div>
+        </div>
+      </div>
+      
+      <div id="sportangebote-MOBILE" class="nav-menu-level-2 nav-menu-MOBILE">
+        <div class="nav-menu-button-wrapper">
+          <div class="nav-button-wrapper">
+            <button class="arrow-button" onclick="closeMenusOpenMenuMOBILE('nav-menu-MOBILE','main-menu')">
+              <i class='bx bxs-left-arrow menu-arrow'></i>
+            </button>
+            <button class="nav-link cursor-default" onclick="closeMenusOpenMenuMOBILE('nav-menu-MOBILE','tennistrainingSubmenu')">tennistraining <i class='bx bxs-right-arrow menu-arrow'></i></i></button>
+            <button class="nav-link" onclick="location.href='#wettkampfmannschaft'; closeMenusMOBILE('nav-menu-MOBILE');">wettkampfmannschaft</button>
+            <div class="nav-menu-spacer"></div>
+          </div>
+        </div>
+      </div>
+
+        <div class="nav-menu-level-3-MOBILE nav-menu-MOBILE" id="tennistrainingSubmenu">
+          <div class="nav-button-wrapper">
+              <button class="arrow-button" onclick="closeMenusOpenMenuMOBILE('nav-menu-MOBILE','sportangebote-MOBILE')">
+                <i class='bx bxs-left-arrow menu-arrow'></i>
+              </button>
+              <button class="nav-link" onclick="location.href='#bambinitraining'; closeMenusMOBILE('nav-menu-MOBILE');">bambinitraining</button>
+              <button class="nav-link" onclick="location.href='#kindertraining'; closeMenusMOBILE('nav-menu-MOBILE');">kindertraining</button>
+              <button class="nav-link" onclick="location.href='#jugendtraining'; closeMenusMOBILE('nav-menu-MOBILE');">jugendtraining</button>
+              <button class="nav-link" onclick="location.href='#erwachsenentraining'; closeMenusMOBILE('nav-menu-MOBILE');">erwachsenentraining</button>
+            <button class="nav-link" onclick="location.href='#wettkampftraining'; closeMenusMOBILE('nav-menu-MOBILE');">wettkampftraining</button>
+            <div class="nav-menu-spacer"></div>
+          </div>
+        </div>
+
+      <div id="kontakt-MOBILE" class="nav-menu-level-2 nav-menu-MOBILE">
+        <div class="nav-button-wrapper">
+          <button class="arrow-button" onclick="closeMenusOpenMenuMOBILE('nav-menu-MOBILE','main-menu')">
+            <i class='bx bxs-left-arrow menu-arrow'></i>
+          </button>
+          <button class="nav-link" onclick="location.href='#impressum'; closeMenusMOBILE('nav-menu-MOBILE');">impressum</button>
+          <button class="nav-link" onclick="location.href='#anfahrtTennisanlage'; closeMenusMOBILE('nav-menu-MOBILE');">anfahrt tennisanlage</button>
+          <div class="nav-menu-spacer"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+      <!-- ------------------- -->
+      <!--    landingpage      -->
+      <!-- ------------------- -->
+      <section id="landingpage">
+        <div id="wrapper-landingpage">
+          <div class="wrapper-logo" id="tennis-club">Tennis-Club</div>
+          <div class="wrapper-logo" id="staudinger" >Staudinger</div>
+          <div class="wrapper-logo" id="gesamtschule">Gesamtschule</div>
+          <div class="wrapper-logo" id="ev">E.V</div>
+          <div id="willkommen">Willkommen!</div>
+        </div>
+      </section>
+
+      <!-- ------------------- -->
+      <!--         news        -->
+      <!-- ------------------- -->
+      <section id="news">
+        <div class="headline-one">
+          News
+        </div>
+        <div class="content">
+
+          <div class="newsletter">
+              <div class="newsletter-headline">
+                <div class="newsletter-headline-title">Newsletter</div>
+                  <div class="newsletter-headline-date">
+                    <div class="newsletter-month-year">Dez</div>
+                    <div class="newsletter-day">26</div>
+                    <div class="newsletter-month-year">2023</div>
+                  </div>
+              </div>
+
+              <div class="newsletter-item">
+
+                  <div class="newsletter-item-headline">
+                      <div class="newsletter-item-headline-info">
+                        Jahresabschluss und<br> Verabschiedung <br class="br-tag-tablet">von Michael
+                      </div>
+                      <div class="hr-wrapper-MOBILE">
+                          <hr class="hr-tag-MOBILE">
+                      </div>
+                    
+                      <div class="newsletter-item-headline-date">
+                        Freitag, 08.12.2023,<br> Tennisklause, <br class="br-tag-tablet">ab 17 Uhr
+                      </div>
+                  </div>
+
+                  <div class="newsletter-item-textbox twoColumns">
+                    <p>
+                      Liebe Mitglieder,<br>
+                      wir möchten nochmal an unseren Jahresabschluss und die Verabschiedung von Michael erinnern. Freitag, 08.12.2023 ab 17 Uhr in der Tennisklause beim Tennisplatz. Einige haben sich schon angemeldet.
+                      Michael macht echte Currywurst aus dem Ruhrgebiet, für Getränke ist auch gesorgt. Vegetarier bringen bitte eigene Verpflegung mit. Außerdem wollen wir wieder das beliebte Schrottwichteln machen.
+                      Also bringt etwas - eingepackt in Geschenkpapier - mit, was ihr nicht mehr braucht oder haben wollt.
+                      Bitte meldet euch bis spätestens Mittwoch, den 6.12. an, damit wir planen können. Wir freuen uns auf rege Teilnahme.<br>
+                      Bis Freitag, Euer Vorstand</p>
+                  </div>
+              </div>
+
+              <div class="newsletter-item">
+                  <div class="newsletter-item-headline">
+                    <div class="newsletter-item-headline-info">
+                      Öffnungszeiten der Tennisanlage in<br class="br-tag-desktop"> den Weihnachtsferien
+                    </div>
+                    <div class="hr-wrapper-MOBILE">
+                      <hr class="hr-tag-MOBILE">
+                    </div>
+                    <div class="newsletter-item-headline-date">
+                      Samstag, 23.12.2023 bis<br> Sonntag, 05.01.2023
+                    </div>
+                  </div>
+                  <div class="newsletter-item-textbox oneColumn">
+                    <p>
+                      Wie gewohnt darf die Tennisanlage in den Schulferien früher am Tag betreten werden. 
+                      Die Öffnungszeiten außerhalb des Schulbetriebs entnehmt ihr hier.
+                    </p>
+                  </div>
+              </div>
+
+              <div class="newsletter-item">
+                <div class="newsletter-item-headline">
+                  <div class="newsletter-item-headline-info">
+                    Lorem ipsum dolor<br> sit amet
+                  </div>
+                  <div class="hr-wrapper-MOBILE">
+                    <hr class="hr-tag-MOBILE">
+                  </div>
+                  <div class="newsletter-item-headline-date">
+                    consectetur, adipiscing<br> elitsed do eiusmod
+                  </div>
+                </div>
+                <div class="newsletter-item-textbox threeColumns">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor        
+                    incididunt ut labore et dolore magna aliqua. Tristique risus nec feugiat in fermentum 
+                    posuere urna nec tincidunt. Id neque aliquam vestibulum morbi blandit. 
+                    Sagittis purus sit amet volutpat consequat mauris nunc congue. 
+                    Sit amet porttitor eget dolor morbi non. Sagittis id consectetur purus 
+                    ut faucibus pulvinar elementum integer enim. Sagittis vitae et leo duis ut diam.
+                  </p>
+
+                  <p>
+                    Pharetra convallis posuere morbi leo urna. Mi proin sed libero enim sed faucibus turpis in. 
+                    Vivamus arcu felis bibendum ut tristique et egestas quis ipsum. 
+                    Odio eu feugiat pretium nibh ipsum consequat nisl vel. 
+                    Ac feugiat sed lectus vestibulum mattis ullamcorper.
+                  </p>
+                    
+                  <p>
+                    Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. 
+                    Sit amet venenatis urna cursus eget nunc scelerisque viverra mauris. 
+                    Tellus molestie nunc non blandit massa enim. Non sodales neque sodales ut etiam sit. 
+                    Vel orci porta non pulvinar neque. Mi sit amet mauris commodo quis imperdiet. 
+                    Eget dolor morbi non arcu risus quis varius quam. 
+                    Quisque non tellus orci ac auctor augue mauris augue neque.
+                  </p>
+
+                  <p>
+                    Ullamcorper sit amet risus nullam eget felis. 
+                    Condimentum lacinia quis vel eros donec ac odio  tempor. 
+                    Accumsan tortor posuere ac ut consequat. 
+                    Quis lectus nulla at volutpat diam ut venenatis tellus in. Ipsum consequat nisl vel pretium. 
+                  </p>
+
+                  <p>
+                    Sed vulputate mi sit amet mauris commodo quis imperdiet massa. 
+                    Non odio euismod lacinia at. Vulputate dignissim suspendisse in est ante in. 
+                    Orci eu lobortis elementum nibh tellus. 
+                    Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. 
+                    Egestas purus viverra accumsan in nisl nisi scelerisque eu. 
+                    Tincidunt vitae semper quis lectus nulla at volutpat diam ut.
+                  </p>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------- -->
+      <!-- platzbelegungszeiten-->
+      <!-- ------------------- -->
+      <section id="platzbelegungszeiten">
+        <div class="headline-one">
+          Platz&shy;belegungszeiten
+        </div>
+        
+        <div class="content">
+          <div class="oneColumn-Box">
+            <p>
+              Hier erfahrt ihr, wann und wie lange die Tennisplätze von Trainingsgruppen belegt werden. <br>
+              Die Zeiten werden freitagabends aktualisiert.
+            </p>
+          </div>
+
+          <div class="table-box">
+            <table class="info-table">
+              <colgroup>                 
+                <col />                 
+                <col  />                 
+                <col />                 
+                <col  />                  
+              </colgroup>
+
+              <thead>
+                  <tr height="35px"  >
+                      <th>Datum</th>
+                      <th>Uhrzeit</th>
+                      <th>Platz</th>
+                      <th>Training</th>
+                  </tr>
+              </thead>
+
+              <tbody>
+                  <tr>
+                      <td data-label="Datum"><br class="br-tag-mobile">So, 04.12.2022</td> 
+                      <td data-label="Uhrzeit"><br class="br-tag-mobile">10:00 - 11:00 Uhr</td>
+                      <td data-label="Platz"><br class="br-tag-mobile">1, 2, 3</td>
+                      <td data-label="Training"><br class="br-tag-mobile">Kindertraining</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Datum"><br class="br-tag-mobile">So, 04.12.2022</td>
+                    <td data-label="Uhrzeit"><br class="br-tag-mobile">11:00 - 12:00 Uhr</td>
+                    <td data-label="Platz"><br class="br-tag-mobile">2, 3</td>
+                    <td data-label="Training"><br class="br-tag-mobile">Jugendtraining</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Datum"><br class="br-tag-mobile">So, 04.12.2022</td>
+                    <td data-label="Uhrzeit"><br class="br-tag-mobile">12:00 - 14:00 Uhr</td>
+                    <td data-label="Platz"><br class="br-tag-mobile">1, 2, 3</td>
+                    <td data-label="Training"><br class="br-tag-mobile">Wettkampftraining</td>
+                  </tr>
+              </tbody>
+          </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------- -->
+      <!--   oeffnungszeiten   -->
+      <!-- ------------------- -->
+      <section id="oeffnungszeiten">
+        <div class="headline-one">
+          Öffnungszeiten
+        </div>
+        <div class="content">
+          <div class="table-box">
+            <table class="info-table">
+              <colgroup>                 
+                  <col />                 
+                  <col />                    
+                  <col />                  
+              </colgroup>
+
+              <thead>
+                  <tr height="35px"  >
+                      <th>Tage</th>
+                      <th>W&auml;hrend Schulbetrieb</th>
+                      <th>In den Schulferien</th>
+                  </tr>
+              </thead>
+
+              <tbody>
+                  <tr>
+                      <td data-label="Tage"><br class="br-tag-mobile">Montag, Dienstag,<br> 
+                          Donnerstag, Freitag</td>
+                      <td data-label="W&auml;hrend Schulbetrieb"><br class="br-tag-mobile">16:00 bis 21:00 Uhr</td>
+                      <td data-label="In den Schulferien"><br class="br-tag-mobile">09:00 bis 21:00 Uhr</td>
+                  </tr>
+                  <tr>
+                      <td data-label="Tage"><br class="br-tag-mobile">Mittwoch</td>
+                      <td data-label="W&auml;hrend Schulbetrieb"><br class="br-tag-mobile">13:30 bis 21:00 Uhr</td>
+                      <td data-label="In den Schulferien"><br class="br-tag-mobile">09:00 bis 21:00 Uhr</td>
+                  </tr>
+                  <tr>
+                      <td data-label="Tage"><br class="br-tag-mobile">Samstag, Sonntag</td>
+                      <td data-label="W&auml;hrend Schulbetrieb"><br class="br-tag-mobile">09:00 bis 21:00 Uhr</td>
+                      <td data-label="In den Schulferien"><br class="br-tag-mobile">09:00 bis 21:00 Uhr</td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="oneColumn-Box" >
+            <div class="headline-three">Das Hauptnutzungsrecht der Staudinger Gesamtschule</div>
+            <div class="wrapper-oeffnungszeiten">
+              <p>
+                Die Tennisanlage gehört nicht dem Verein sondern der Stadt Freiburg. 
+                Die Staudinger Gesamtschule hat das Hauptnutzungsrecht.
+                Der Tennisverein kann die Tennisanlage nutzen, wenn sie nicht von der Schule beansprucht wird. 
+                Daraus ergibt sich, dass die Gesamtschule während des Schulbetriebs (8.00 – 16.00 Uhr) 
+                und darüber hinaus die Tennisanlage für sich beanspruchen kann (bspw. für Sportfeste).    
+              </p>
+              <p>
+                Der Vorstand ist bemüht, die Vereinsmitglieder zu informieren, 
+                wenn Schulveranstaltungen außerhalb des "normalen Schulbetriebs" stattfinden.
+              </p>
+              <p>
+                Die Vereinsmitglieder sind verpflichtet JEDERZEIT die Tennisanlage zu verlassen, wenn ein Lehrkörper oder ein anderer Funktionär der Staudinger Gesamtschule sie dazu auffordert. Zuwiderhandlung wird mit einem sofortigen Vereinsausschluss gehandhabt.
+              </p>
+            </div> 
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ------------------- -->
+      <!-- vereinsphilosophie -->
+      <!-- ------------------- -->
+      <section id="vereinsphilosophie">
+        <div class="headline-one">
+          <br class="br-tag-mobile">
+          Vereins&shy;philosophie
+        </div>
+
+        <div class="content">
+            <div class="twoColumns-Box">
+              <div class="leftColumn">
+                <div class="twoColumns-Box-item">
+                  <div class="headline-two">
+                    Tennis gemeinsam <br>
+                    spielen, erlenen <br>
+                    und erleben
+                  </div>
+                  <div class="contentBox">
+                    <p>
+                      Tennis gemeinsam spielen, erlernen und  erleben. 
+                      Dies soll für alle, die am Schulleben der  Staudinger-Gesamtschule teilnehmen, möglich sein.  
+                      Der Tennisverein in der Schule besteht seit 1979 und ist dadurch gekennzeichnet,  
+                      dass er wie ein richtiger Verein organisiert ist. Die Vereinsbeiträge sind aus diesen Gründen günstig.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="rightColumn">
+                <!-- Leeres twoColumns-Box-item, damit das nachfolgende item even ist. -->
+                <div class="twoColumns-Box-item"></div>
+                <!-- Dieses twoColumns-Box-item ist jetzt even. -->
+                <div class="twoColumns-Box-item">
+                  <div class="headline-two">
+                      Integrativ, <br>
+                      partnerschaftlich <br>
+                      und selbst&shy;verantwortlich
+                  </div>
+                  <div class="contentBox">
+                    <p>
+                      Alle SchülerInnen, Eltern, Bedienstete und LehrerInnen können in den Verein eintreten und Tennis spielen oder das Tennisspielen erlernen. Die SchülerInnen, Eltern, Bedienstete und LehrerInnen gestalten durch ihre Mitbestimmung und Mitgestaltung das Vereinsleben. SchülerInnen, Eltern, Bedienstete und LehrerInnen organisieren sich in Spielgemeinschaften, bei Wettkämpfen selbstständig oder treffen sich zum freiem Spiel.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- ------------------- -->
+      <!--       vorstand      -->
+      <!-- ------------------- -->
+      <section id="derVorstand">
+        <div class="headline-one">
+          Der Vorstand
+        </div>
+        <div class="content">
+
+          <div class="vorstand-image-box">
+
+            <div class="vorstand-item" id="geo">
+              <image src="images/georgia-quadrat.PNG" class="vorstand-foto" ></image>
+              <div class="vorstand-image-title">Georgia<br>Burgart</div>
+              <div class="vorstand-image-subtitle">2. Vorsitzende <br>Schriftführerin </div>
+            </div>
+
+            <div class="vorstand-item">
+              <image src="images/erik-quadrat.PNG" class="vorstand-foto" ></image>
+              <div class="vorstand-image-title">Erik<br> Delgado</div>
+              <div class="vorstand-image-subtitle">1. Vorsitzender</div>
+            </div>
+
+            <div class="vorstand-item">
+              <image src="images/michael-quadrat.PNG" class="vorstand-foto" ></image>
+              <div class="vorstand-image-title">Michael<br> Gödde</div>
+              <div class="vorstand-image-subtitle">Platzwart</div>
+            </div>
+            
+            <div class="vorstand-item">
+              <image src="images/wilfried-quadrat.PNG" class="vorstand-foto"></image>
+              <div class="vorstand-image-title">Willfried<br>Burgardt</div>
+              <div class="vorstand-image-subtitle">Kassenwart</div>
+            </div>
+
+            <div class="vorstand-item">
+              <image src="images/ognjen-quadrat.PNG" class="vorstand-foto" ></image>
+              <div class="vorstand-image-title">Ognjen<br>Deronja</div>
+              <div class="vorstand-image-subtitle">Sportwart</div>
+            </div>
+
+            <div class="vorstand-item">
+              <image src="images/lilth-quadrat.PNG" class="vorstand-foto" ></image>
+              <div class="vorstand-image-title">Lilith<br>Gödde</div>
+              <div class="vorstand-image-subtitle">Jugendwartin</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------- -->
+      <!-- gastspielerregelung -->
+      <!-- ------------------- -->
+      <section id="gastspielerregelung">
+        
+        <div class="headline-one">
+          Gastspieler&shy;regelung
+        </div>
+
+        <div class="content">
+          <div class="twoColumns-Box">
+
+            <div class="leftColumn">
+
+              <div class="twoColumns-Box-item">
+                <div class="headline-two">
+                  Wann darf ein Gast auf <br>
+                  der Tennisanlage  <br>
+                  spielen?
+                </div>
+                <div class="contentBox">
+                  <p> 
+                    Gäste dürfen nur zu bestimmten Zeiten auf der Tennisanlage spielen. 
+                    Spielzeiten für Gäste bis zum 28.07.2021: <br>
+                    Mo bis Fr ab 20 Uhr; an Wochenenden keine Beschränkung.
+                  </p>
+                  <p> 
+                    Spielzeiten für Gäste ab dem 29.07.2021 bis zum 13.09.2021:<br>
+                    Mo bis Fr von 0.00 Uhr bis 15 Uhr und ab 20 Uhr; an Wochenenden keine Beschränkungen.</p>
+                  <p>
+                    Spielzeiten für Gäste ab 14.09. bis 30.09.2021:<br>
+                    Mo bis Fr ab 20 Uhr; an Wochenenden keine Beschränkung.
+                  </p>
+                  <p>
+                    <b>Ab dem 1.Oktober 2021 sind keine Gastspieler mehr erlaubt.</b>
+                  </p>
+                </div>
+              </div>
+              
+              <div class="twoColumns-Box-item">
+                <div class="headline-two">
+                  Bezahlung
+                </div>
+  
+                <div class="contentBox">
+                  <p>
+                    Der Betrag für den Gastspieler wird beim Vereinsmitglied per Bankeinzug abgebucht
+                  </p>
+                  <p>
+                    Wer Gäste einlädt, ist verpflichtet, folgende <a href="#">Einzugsermächtigung</a> auszufüllen und zu senden.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            
+            <div class="rightColumn">
+              <div class="twoColumns-Box-item">
+                <div class="headline-two">
+                  Wie viele Gäste <br>
+                  kann ich mitbringen?
+                </div>
+                <div class="contentBox">
+                  <p>
+                    Es darf nur ein Gast pro Mitglied eingeladen werden.
+                  </p>
+                </div>
+              </div>
+
+              <div class="twoColumns-Box-item">
+                <div class="headline-two">
+                  Eintragung <br>
+                  und Kosten
+                </div>
+                <div class="contentBox">
+                  <p>Das Vereinsmitglied ist verantwortlich, dass der Gast in die Belegungsliste  eingetragen wird.
+                    Der Gast wird in der Belegungsliste mit einem roten Aufkleber markiert: 
+                    Roten Aufkleber hinter den Namen des Gastes kleben. 
+                    Die roten Aufklebepunkte sind im Schaukasten neben der Belegungsliste platziert.
+                    Kosten pro Gastspieler pro Stunde: 5,00 €.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------- -->
+      <!--mitgliederneuafnahme -->
+      <!-- ------------------- -->
+      <section id="mitgliederneuafnahme">
+        <div class="headline-one">
+          Mitglieder&shy;neuafnahme
+        </div>
+        <div class="content">
+          <div class="oneColumn-Box">
+            <p>
+              Liebe Interessenten, <br> 
+              zur Zeit werden keine neuen Mitglieder im Verein aufgenommen. <br> 
+              Grund dafür ist, dass der Verein sich neu sortiert. <br>
+              In Zukunft plant der Vorstand die Aufnahme neuer Vereinsmitglieder. <br> 
+              Das Formular für eine Neuaufnahme findet ihr hier:
+            </p>
+
+            <a href="https://www.youtube.com/watch?v=-LaRPt0fGns" target="_blank">Aufnahmeantrag für Erwachsene</a>
+           
+            <a href="#" target="_blank">Aufnahmeantrag für Jugendliche</a> 
+        </div>
+      </section>
+
+      <!-- ------------------- -->
+      <!--    bambinitraining  -->
+      <!-- ------------------- -->
+      <section id="bambinitraining">
+        <div class="headline-one">
+          Bambinitraining
+        </div>
+        <div class="content">
+          <div class="oneColumn-Box">
+            <p>
+              Das Bambinitraining richtet sich an Kinder ab 4 Jahre. <br>
+              Hier werden die Grundlagen für den Tennissport gelegt. <br>
+              Das Training richtet sich an den Inhalten der Heidelberger Ballschule.
+            </p>
+            <p>
+              <span class="uppercase">Zielgruppe:</span> Kinder ab 3 Jahre. <br>
+              <span class="uppercase">Termine:</span> Sonntags (ausgenommen Schulferien). <br>
+              <span class="uppercase">Uhrzeit:</span>  09:00 bis 10:00 Uhr.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------- -->
+      <!--   jugendtraining    -->
+      <!-- ------------------- -->
+      <section id="jugendtraining">
+        <div class="headline-one">
+          Jugendtraining
+        </div>
+        <div class="content">
+          <div class="oneColumn-Box">
+            <p>
+              Das Jugendtraining richtet sich an Jugendliche ab 13 Jahre.  <br> 
+              In diesem Training wird der Übergang vom Midifeld ins Großfeld angestrebt.
+            </p>
+            <p>
+              <span class="uppercase">Zielgruppe:</span> Jugendliche ab 13 Jahre. <br>
+              <span class="uppercase">Termine:</span> Sonntags (ausgenommen Schulferien). <br>
+              <span class="uppercase">Uhrzeit:</span>  11:30 bis 13:00 Uhr.
+            </p>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <!-- ------------------- -->
+      <!--   kindertraining    -->
+      <!-- ------------------- -->
+      <section id="kindertraining">
+        <div class="headline-one">
+          Kindertraining
+        </div>
+
+        <div class="content">
+          <div class="oneColumn-Box">
+            <p>
+              Das Kindertraining richtet sich an Kinder zwischen 6 und 12 Jahre. <br> 
+              Der Tennissport wird im Sinne der Stage-Methode erlernt. <br> 
+              Die Kinder spielen mit druckreduzierten Bällen auf Kleinfeldern (Minifeld, Midifeld).
+            </p>
+            <p>
+              <span class="uppercase">Zielgruppe:</span> Kinder von 6 bis 12 Jahre. <br>
+              <span class="uppercase">Termine:</span> Sonntags (ausgenommen Schulferien). <br>
+              <span class="uppercase">Uhrzeit:</span>  10:00 bis 11:30 Uhr.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------- -->
+      <!-- erwachsenentraining -->
+      <!-- ------------------- -->
+      <section id="erwachsenentraining">
+          <div class="headline-one">
+            Erwachsenen&shy;training
+          </div>
+
+          <div class="content">
+            <div class="oneColumn-Box">
+              <p>
+                Hier gibt es für Erwachsene die Möglichkeit in Gruppen das Tennisspiel zu erlernen.
+              </p>
+            </div>
+          </div>
+
+          <div class="twoColumns-Box">
+
+            <div class="leftColumn">
+              <div class="twoColumns-Box-item">
+                <div class="headline-two">Freitagstraining</div>
+                <div class="contentBox">
+                  <p>
+                    <span class="uppercase">Zielgruppe:</span> Erwachsene. <br>
+                    <span class="uppercase">Termine:</span> Freitags (nach Absprache). <br>
+                    <span class="uppercase">Uhrzeit:</span> 16:00 bis 18:00 Uhr.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rightColumn">
+              <!-- Leeres twoColumns-Box-item, damit das nachfolgende item even ist. -->
+              <div class="twoColumns-Box-item"></div>
+              <div class="twoColumns-Box-item">
+                <div class="headline-two">Samstagstraining</div>
+                <div class="contentBox">
+                  <p>
+                    <span class="uppercase">Zielgruppe:</span> Erwachsene. <br>
+                    <span class="uppercase">Termine:</span> Samstags (nach Absprache). <br>
+                    <span class="uppercase">Uhrzeit:</span> 09:30 bis 11:00 Uhr.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          
+      </section>
+
+      <!-- ------------------- -->
+      <!--  wettkampftraining  -->
+      <!-- ------------------- -->
+      <section id="wettkampftraining">
+        <div class="headline-one">
+          Wettkampf&shy;training
+        </div>
+        <div class="content">
+          <div class="oneColumn-Box">
+            <p>
+              Das Training ist für Wettkampfspieler und Turnierspieler konzipiert.
+            </p>
+            <p>
+              <span class="uppercase">Zielgruppe:</span> Wettkampfspieler. <br>
+              <span class="uppercase">Termine:</span> Sonntags (ausgenommen Schulferien). <br>
+              <span class="uppercase">Uhrzeit:</span>  12:00 bis 14:00 Uhr.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------- -->
+      <!-- wettkampfmannschaft -->
+      <!-- ------------------- -->
+      <section id="wettkampfmannschaft">
+        <div class="headline-one">
+          Wettkampf&shy;mannschaft
+        </div>
+        <div class="content">
+          <div class="oneColumn-Box">
+            <div class="headline-three">Spielgemeinschaft<br> TC Denzlingen/ TC Staudinger</div> 
+          </div>
+          
+          <div class="wettkampfmannschaft-image-box">
+            <img src="images/spielgemeinschaft.PNG" class="spielgemeinschaft-foto" alt="">
+          </div>
+        </div>
+      </section>
+      
+      <!-- ------------------- -->
+      <!-- Anfahrt Tennisanlage-->
+      <!-- ------------------- -->
+      <section id="anfahrtTennisanlage">
+        <div class="headline-one">
+          Anfahrt zur Tennisanlage
+        </div>
+        <div class="content">
+          <div class="oneColumn-Box">
+            <p>
+              Staudingerstr 10, 79115 Freiburg. <br>
+              Die Tennisplätze sind hinter der großen Staudinger Halle.
+            </p>
+          </div>
+        </div>
+
+        <div class="iframe-box-wrapper" id="iframe-bigScreen">
+          <div class="iframe-box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d769.2162276875265!2d7.8243143515526725!3d47.99259100435393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47911b41fe0e9aaf%3A0x947e2790d94da3f2!2sGrosse%20Staudinger%20Halle!5e1!3m2!1sde!2sde!4v1700236443651!5m2!1sde!2sde" width="800" height="600" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+          </div>
+        </div>
+        
+        <div class="iframe-box-wrapper" id="iframe-middleScreen">
+          <div class="iframe-box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d769.2162276875265!2d7.8243143515526725!3d47.99259100435393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47911b41fe0e9aaf%3A0x947e2790d94da3f2!2sGrosse%20Staudinger%20Halle!5e1!3m2!1sde!2sde!4v1700236443651!5m2!1sde!2sde" width="600" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+          </div>
+        </div>
+
+        <div class="iframe-box-wrapper" id="iframe-tablet">
+          <div class="iframe-box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d769.2162276875265!2d7.8243143515526725!3d47.99259100435393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47911b41fe0e9aaf%3A0x947e2790d94da3f2!2sGrosse%20Staudinger%20Halle!5e1!3m2!1sde!2sde!4v1700236443651!5m2!1sde!2sde"   allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+          </div>
+        </div>
+        
+        <div class="iframe-box-wrapper" id="iframe-smallScreen">
+          <div class="iframe-box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d769.2162276875265!2d7.8243143515526725!3d47.99259100435393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47911b41fe0e9aaf%3A0x947e2790d94da3f2!2sGrosse%20Staudinger%20Halle!5e1!3m2!1sde!2sde!4v1700236443651!5m2!1sde!2sde" width="400" height="300"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+          </div>
+      </div>
+      
+      </section>
+
+      <!-- ------------------- -->
+      <!--      impressum      -->
+      <!-- ------------------- -->
+      <section id="impressum">
+        <div class="headline-one">
+          Impressum
+        </div>
+        <div class="content">
+          <div class="twoColumns-Box">
+
+            <div class="leftColumn">
+              <div class="twoColumns-Box-item">
+                <div class="headline-two">
+                  Anschrift der <br>
+                  Tennisanlage
+                </div>
+                <div class="contentBox">
+                  <p> 
+                    TC-Staudinger Gesamtschule e.V.<br>
+                    Staudingerstraße 10, <br>
+                    79115 Freiburg im Breisgau
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rightColumn">
+              <!-- Leeres twoColumns-Box-item, damit das nachfolgende item even ist. -->
+              <div class="twoColumns-Box-item"></div>
+              <div class="twoColumns-Box-item">
+                <div class="headline-two">
+                  Postanschrift
+                </div>
+                <div class="contentBox">
+                  <p>
+                    TC-Staudinger Gesamtschule e.V. <br> 
+                    Vertreten durch: <br> 
+                    Erik Delgado, <br> 
+                    Rennweg 5, <br> 
+                    79106 Freiburg im Breisgau
+                  </p>
+                </div>
+              </div>
+
+              <div class="twoColumns-Box-item">
+                  <div class="headline-two">
+                    Mailadresse
+                  </div>
+                  <div class="contentBox">
+                    <p>vorstand-tcstaudinger@gmx.de</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="oneColumn-Box" style="text-align: left;" id="haftungsausschluss">
+            <div class="headline-three" >Haftungsausschluss (Disclaimer)</div>
+            <p>
+              <b>Datenschutz</b> <br> 
+              Die Vertreter des TC-Staudingers nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+              Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.
+              Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
+            </p>
+            <p>
+              <b>Kontaktformular</b> <br>
+              Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+            </p>
+            <p>
+              <b>Widerspruch Werbe-Mails</b> <br>
+              Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-E-Mails, vor.
+            </p>
+            <p>
+              <b>Quelle: <a href="https://www.e-recht24.de/" target="_blank">eRecht</a> </b> <br>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-wrapper">
+          <div class="copyright">
+            <a href="https://delgado-designs.de/" target="_blank">&#xA9; 2023 delgado-designs.de</a>
+            </div>
+          <div id="footer-logo">Tennis-Club Staudinger Gesamtschule e.V.</div>
+          <div class="copyright"></div>
+        </div>
+      </footer>  
+<script src="main.js"></script>
+</body>
+</html>
